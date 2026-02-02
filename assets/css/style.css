@@ -1,0 +1,544 @@
+* {
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  padding-top: 60px;
+  background-color: #000000;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+p {
+  text-align: justify;
+}
+
+/* =========== CUSTOM STYLE ======== */
+.custom-padding-m {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+/* ================================= */
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #fff !important;
+  padding: 0.75rem 64px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #000000;
+}
+
+/* UNDERLINE ANIMATION */
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.dropdown-menu {
+  border-radius: 0.5 rem;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #000000;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+  border-radius: 0.5rem;
+}
+
+/* === TEXT STYLE === */
+.heading {
+  text-align: center;
+  justify-self: center;
+}
+
+/* === CTA WHATSAPP === */
+.btn-floating-wa {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vh;
+  background-color: #1cab5f;
+  border: 5px solid #126e3d;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.btn-floating-wa:hover {
+  background-color: #179b55;
+  text-decoration: none;
+  color: white;
+}
+
+/* === HEADER === */
+.hero-header {
+  width: 100%;
+  height: 95vh;
+  padding-bottom: 16vh; /* Margin from the top */
+  padding-left: 10%; /* Adjust left padding as needed */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  flex-direction: column; /* Stack h1 and p vertically */
+
+  justify-content: flex-end; /* Align content to the start (left) */
+  align-items: flex-start; /* Align content to the start (top) */
+  color: white; /* Text color on the header */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-header h1 {
+  margin-bottom: 0.5rem; /* Space between H1 and subtitle */
+  font-weight: 700;
+}
+
+.hero-header p {
+  font-size: 1.75rem; /* Adjust subtitle font size */
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* =========== SECTIONS ======== */
+#intro {
+  background-color: #ffffff;
+}
+
+#intro img {
+  max-height: 150px;
+}
+
+#exploreOutlet {
+  background-color: #a7d9f1;
+  color: #000000;
+}
+#mainOutlet {
+  background-color: #c1eafd;
+  color: #000000;
+}
+
+#usp .col-lg-1{
+  width: 13%;
+  color: #000000;
+}
+
+#usp {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+/* === Unique Selling Point Section === */
+.usp-item {
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.usp-item .usp-image-wrapper {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem; /* Space between image and text on small screens */
+}
+
+.usp-item .usp-image {
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.usp-item h3 {
+  font-weight: 600; /* Semi-bold for item titles */
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.usp-item p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* === Menu Section === */
+#menu {
+  background-color: #1a1a1a;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  color: #ffffff;
+}
+
+.menu-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.menu-cover {
+  border-radius: 25px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+    0 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  height: auto;
+  display: inline-block;
+}
+
+/* TO DO! EFISINESI CSS SECTION */
+
+.menu-cover:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7),
+    0 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments
+@media (max-width: 767.98px) {
+  .menu-section .col-md-6 {
+    text-align: center !important;
+  }
+} */
+
+.section-a {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.section-b {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-c {
+  background-color: #004098;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#price th,
+#price td {
+  background: transparent;
+  color: #ffffff;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+.social-link:hover {
+  color: #d1d1d1;
+  text-decoration: underline;
+}
+
+.map {
+  overflow: hidden;
+  border-radius: 30px;
+  margin-top: 32px;
+}
+/* =============================================================================== */
+/* === Gallery === */
+#gallery {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 0px;
+}
+
+/* main slide keeps 16:9 look on desktop, full‑width on small screens */
+#main-slide {
+  aspect-ratio: 16/9;
+}
+
+/* thumbnail sizing */
+.thumb {
+  width: 140px; /* tweak as you like */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  filter: brightness(0.5);
+  transition: filter 0.2s, transform 0.2s;
+}
+.thumb.active,
+.thumb:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+/* arrow buttons */
+.btn-nav {
+  width: 64px;
+  height: 64px;
+  border: none;
+  background: #e0e0e0;
+  color: #000000;
+  flex-shrink: 0;
+}
+.btn-nav:hover {
+  background: #fff;
+}
+
+#thumb-wrapper {
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+#thumb-strip {
+  padding: 2px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+#thumb-strip::-webkit-scrollbar {
+  display: none;
+} /* hide scrollbar Chrome */
+
+/* =============================================================================== */
+/* FOOTER OUTLET INFINITE SCROLLING */
+
+footer {
+  background: #000;
+  color: #ffffff;
+  padding-top: 32px;
+}
+
+footer ul {
+  margin-bottom: 0px;
+}
+
+/* Outlet Track Wrapper */
+.outlet-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Continuous Scroll (2x content) */
+#outlet-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+/* Keyframes for Smooth Infinite Loop */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.outlet-card {
+  position: relative;
+  flex: 0 0 260px;
+  height: 150px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+.outlet-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: brightness(0.75);
+}
+
+.outlet-card img,
+.outlet-card .brand-name {
+  position: relative;
+  z-index: 1;
+}
+
+.outlet-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.brand-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+#copyright {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* =============================================================================== */
+
+/* (VIEWPORT for Tablet to Smallest (Default))*/
+/* Responsive adjustments for navbar padding */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem 15px; /* Less padding on smaller screens */
+    padding-bottom: 1rem;
+  }
+  .navbar-brand img {
+    max-height: 40px;
+  }
+  .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+/* (VIEWPORT for Smallest to Mobile Phone)*/
+@media (max-width: 768px) {
+  .hero-header {
+    padding-top: 30%; /* Adjust margin for mobile */
+    padding-left: 5%; /* Adjust left padding for mobile */
+  }
+  .hero-header h1 {
+    font-size: 2rem; /* Smaller font on mobile */
+  }
+  .hero-header p {
+    font-size: 1rem; /* Smaller font on mobile */
+  }
+}
+
+/* cikaogroup outlet */
+#outlets {
+  background-color: #a7d9f1;
+}
+
+.layout {
+  background-color: #a7d9f1;
+  width: 100%;
+  /* width: 1920; sebelumnya, ini error karna fixed
+      height: 200; dan juga invalid gk ada satuan-nya*/
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.layout div {
+  display: flex;
+  width: 300px;
+  height: 175px;
+  background-color: white;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.layout .mainEvent {
+  width: 975px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.layout .outlet-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain !important;
+}
+
+
+/* layout outlet utama */
+.mainlayout {
+  width: 100%;
+  height: 300;
+  /* margin:  auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mainlayout div {
+  flex: 1 1 100%;
+  max-width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#slideMainOutlet {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease;
+}
+
+/* a {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline; 
+} */
